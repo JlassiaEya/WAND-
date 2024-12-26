@@ -1,0 +1,77 @@
+body {
+    background-color: grey;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif; /* Change the font-family as needed */
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+  }
+  
+  .no-projects {
+    text-align: center;
+  }
+  
+  .no-projects p {
+    font-size: 1.2em;
+  }
+  
+  /* Add your existing card styles here */
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #2a2a2a;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Adjust as needed */
+  }
+  
+  .card h4 {
+    margin-top: 0;
+  }
+  
+  .card p {
+    margin-bottom: 10px;
+  }
+  
+  .project-link {
+    background-color: #4a3f00;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .project-link:hover {
+    background-color: #75360f;
+  }
+.add{
+    background-color: #4a3f00; /* Slightly darker button color */
+    color: #ffffff;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease-in-out; /* Button animation */
+    border-radius: 5px; /* Added border-radius */
+}
+.add:hover {
+    background-color: #75360f;
+    transform: scale(1.05); /* Button scale on hover */
+}

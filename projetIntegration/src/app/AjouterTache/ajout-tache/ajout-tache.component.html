@@ -1,0 +1,42 @@
+<body>
+  <div class="content">
+    <div class="form-container">
+      <h2>Ajouter une tâche</h2>
+      <form (submit)="ajouterTache()">
+        <div>
+          <label for="nom">Nom de la tâche : </label>
+          <input type="text" id="nom" name="nom" [(ngModel)]="nouvelleTache.nom" required>
+        </div>
+        <div>
+          <label for="description">Description : </label>
+          <textarea id="description" name="description" [(ngModel)]="nouvelleTache.description" required></textarea>
+        </div>
+        <div>
+          <label for="dateDebut">Date de début : </label>
+          <input type="date" id="dateDebut" name="dateDebut" [(ngModel)]="nouvelleTache.dateDebut" required>
+        </div>
+        <div>
+          <label for="dateFinPrevue">Date de fin prévue : </label>
+          <input type="date" id="dateFinPrevue" name="dateFinPrevue" [(ngModel)]="nouvelleTache.dateFinPrevue" required>
+        </div>
+        <div>
+          <label for="categorie">Catégorie : </label>
+          <input type="text" id="categorie" name="categorie" [(ngModel)]="nouvelleTache.categorie" required>
+        </div>
+        <div>
+          <label for="assigneA">Assigné à : </label>
+          <input type="email" id="assigneA" name="assigneA" [(ngModel)]="nouvelleTache.assigneA" required>
+        </div>
+        
+        <div>
+          <label for="commentaires">Commentaires : </label>
+          <textarea id="commentaires" name="commentaires" [(ngModel)]="nouvelleTache.commentaires"></textarea>
+        </div>
+
+        <span *ngIf="erreurAjout" class="erreur">{{ erreurAjout }}</span>
+        
+        <button type="submit">Ajouter</button>
+      </form>
+    </div>
+  </div>
+</body>

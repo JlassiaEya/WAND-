@@ -1,0 +1,24 @@
+<body>
+  <div class="content">
+    <div class="task-container">
+      <h3>Liste des tâches du projet {{ title }}</h3>
+      
+      <div *ngIf="taches && taches.length > 0" class="task-list">
+        <ul>
+          <li *ngFor="let tache of taches" class="task-item">
+            <p><strong>Nom de la tâche:</strong> {{ tache.nom }}</p>
+            <p><strong>Description:</strong> {{ tache.description }}</p>
+            <p><strong>Date de début:</strong> {{ tache.dateDebut | date:'yyyy/MM/dd' }}</p>
+            <p><strong>Date de fin prévue:</strong> {{ tache.dateFinPrevue | date:'yyyy/MM/dd' }}</p>
+          </li>
+        </ul>
+      </div>
+
+      <div *ngIf="!taches || taches.length === 0" class="no-tasks">
+        <p>Aucune tâche n'est disponible pour ce projet.</p>
+      </div>
+      
+      <button (click)="addTache()">Ajouter une tâche</button>
+    </div>
+  </div>
+</body>

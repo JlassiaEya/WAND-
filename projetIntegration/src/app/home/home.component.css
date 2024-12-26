@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e; /* Darker background */
+    color: #e0e0e0; /* Lighter text */
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #2a2a2a; /* Slightly lighter navbar */
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #f0f0f0; /* Lighter logo color */
+    text-decoration: none;
+    transition: color 0.3s; /* Logo color transition */
+}
+
+.navbar .logo:hover {
+    color: #ffffff; /* Logo color on hover */
+}
+
+.navbar .links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-link{
+    color: white;
+}
+
+.navbar .links li {
+    color: #d0d0d0; /* Lighter text color */
+    cursor: pointer;
+    transition: .3s;
+    text-decoration: none; /* Added to remove underline */
+    transform: translateY(0); /* Initial state for animation */
+    transition: transform 0.3s ease-in-out; /* Animation */
+}
+
+.navbar .links li:hover {
+    text-decoration: underline;
+    color: #ffffff; /* Highlighted text color on hover */
+    transform: translateY(-5px); /* Move link up on hover */
+}
+
+.navbar .phone {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 15px; /* Slightly increased padding */
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    transition: .3s;
+}
+
+.navbar .phone:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transform: translateY(-2px); /* Move button up on hover */
+}
+
+.content {
+    text-align: center;
+    padding: 40px 20px; /* Increased padding */
+}
+
+h1 {
+    font-size: 3em; /* Increased font size */
+    margin-top: 10%; /* Adjusted margin */
+}
+
+p {
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: #784c15; /* Slightly darker button color */
+    color: #ffffff;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease-in-out; /* Button animation */
+    border-radius: 5px; /* Added border-radius */
+}
+
+button.btn-secondary {
+    background-color: #784c15; /* Previous button color */
+}
+
+button:hover {
+    background-color: #75360f;
+    transform: scale(1.05); /* Button scale on hover */
+}

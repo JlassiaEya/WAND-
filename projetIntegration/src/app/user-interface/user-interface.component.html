@@ -1,0 +1,16 @@
+<body>
+    <div class="content">
+      <div class="user-info">
+        <h2>Informations de l'utilisateur</h2>
+        <div>
+            <img [src]="'assets/personne.png'" alt="Avatar de l'utilisateur" style="width: 100px; height: 100px; border-radius: 50%;">
+        </div>
+        <div>
+            <p>Nom d'utilisateur : {{ user.username }}</p>
+            <p>Email : {{ user.email }}</p>
+        </div>
+        <button (click)="logout()">Déconnexion</button>
+      </div>
+    </div>
+  </body>
+  

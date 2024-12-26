@@ -1,0 +1,28 @@
+<body>
+  <div class="content">
+    <button (click)="addProject()" class="add">Add Project</button>
+    <h3>Your Projects</h3>
+
+    <div *ngIf="userProjects.length > 0" class="project-container">
+      <h2>Projets de l'utilisateur</h2>
+      <div class="card-container">
+        <div *ngFor="let project of userProjects" class="card">
+          <!-- Card content -->
+          <h4>{{ project.title }}</h4>
+          <p>{{ project.description }}</p>
+          <p>{{ project.createdDate | date:'yyyy/MM/dd' }}</p>
+          <button type="button" class="project-link" (click)="GoToTache(project.id, project.title)">
+            Voir les tâches
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="userProjects.length === 0" class="no-projects">
+      <p>Aucun projet trouvé pour cet utilisateur.</p>
+    </div>
+
+    <a href="Profile">Profil</a>
+    <a href="notif">Notification</a>
+  </div>
+</body>

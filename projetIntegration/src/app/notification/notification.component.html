@@ -1,0 +1,9 @@
+<div *ngFor="let notification of notifications">
+    <div class="notification">
+      <p>{{ notification.contenu }}</p>
+      <button (click)="accepterNotification(notification.id)">Accepter</button>
+      <button (click)="refuserNotification(notification.id)">Refuser</button>
+
+    </div>
+  </div>
+  

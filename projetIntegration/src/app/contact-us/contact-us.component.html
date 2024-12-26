@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="#" class="logo">wand!</a>
+            <ul class="links">
+                <li><a  routerLink="/home" class="nav-link">Home</a></li>
+                <li><a  routerLink="/aboutus" class="nav-link">About Us</a></li>
+                <li><a  routerLink="/contactus" class="nav-link">Contact Us</a></li>
+                <li><a href="tel:29370614" class="phone">29370614</a></li>
+            </ul>
+        </div>
+    <div class="contact-us-container">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or inquiries, please feel free to reach out to us using the form below.</p>
+      
+        <form (ngSubmit)="submitForm()" class="contact-form">
+          <div class="form-group">
+            <label>Name:</label>
+            <input type="text" [(ngModel)]="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label>Email:</label>
+            <input type="email" [(ngModel)]="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label>Subject:</label>
+            <input type="text" [(ngModel)]="subject" name="subject">
+          </div>
+          <div class="form-group">
+            <label>Message:</label>
+            <textarea [(ngModel)]="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      
+        <div *ngIf="successMessage" class="success">{{ successMessage }}</div>
+      </div>
+    </div>
+</body>
+</html>
+
+  
